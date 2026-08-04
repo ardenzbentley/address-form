@@ -5,29 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mailing Address</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --stone:#EDE7DA;
-    --stone-deep:#E2DAC7;
-    --ink:#2E2A24;
-    --ink-soft:#5C564C;
-    --plum:#6B3346;
-    --plum-deep:#54263A;
-    --sage:#7C8A6E;
-    --gold:#B79962;
-    --white:#FFFDF9;
+    --paper:#FBF6EC;
+    --stone:#FFEAC5;
+    --stone-deep:#F2D9A8;
+    --ink:#1A243D;
+    --ink-soft:#6D7A73;
+    --plum:#733015;
+    --plum-deep:#4F2110;
+    --burnt:#A24617;
+    --forest:#374E3E;
+    --sage:#6D7A73;
+    --gold:#CE8A39;
+    --white:#FFFFFF;
     --error:#A5433A;
     --radius:2px;
   }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
   body{
-    background:var(--stone);
+    background:var(--forest);
     background-image:
-      radial-gradient(circle at 15% 10%, rgba(183,153,98,0.08), transparent 40%),
-      radial-gradient(circle at 85% 90%, rgba(107,51,70,0.07), transparent 45%);
-    font-family:'EB Garamond',serif;
+      radial-gradient(circle at 15% 10%, rgba(206,138,57,0.12), transparent 40%),
+      radial-gradient(circle at 85% 90%, rgba(26,36,61,0.25), transparent 45%);
+    font-family:'Work Sans',sans-serif;
     color:var(--ink);
     min-height:100vh;
     padding:32px 16px 64px;
@@ -47,7 +50,7 @@
     position:absolute;
     top:0;left:0;right:0;
     height:6px;
-    background:linear-gradient(90deg,var(--sage),var(--gold) 50%,var(--plum));
+    background:linear-gradient(90deg,var(--stone) 0%,var(--gold) 22%,var(--burnt) 42%,var(--plum) 58%,var(--forest) 78%,var(--ink) 100%);
     opacity:0.85;
   }
 
@@ -59,7 +62,7 @@
     border:1px solid var(--gold);
     border-radius:999px;
     overflow:hidden;
-    font-family:'EB Garamond',serif;
+    font-family:'Work Sans',sans-serif;
     font-size:11px;
     letter-spacing:0.06em;
     z-index:2;
@@ -77,7 +80,7 @@
   }
   .lang-toggle button.active{
     background:var(--plum);
-    color:var(--white);
+    color:var(--stone);
   }
 
   .header{
@@ -86,7 +89,8 @@
     border-bottom:1px solid var(--stone);
   }
   .eyebrow{
-    font-family:'EB Garamond',serif;
+    font-family:'Work Sans',sans-serif;
+    font-weight:600;
     font-size:10.5px;
     letter-spacing:0.22em;
     text-transform:uppercase;
@@ -94,11 +98,12 @@
     margin:0 0 14px;
   }
   h1{
-    font-family:'Cormorant Garamond',serif;
+    font-family:'Fraunces',serif;
     font-weight:500;
+    font-style:italic;
     font-size:clamp(28px,6vw,38px);
     margin:0 0 10px;
-    color:var(--plum-deep);
+    color:var(--ink);
     letter-spacing:0.01em;
   }
   .sub{
@@ -116,14 +121,15 @@
     margin:0 0 30px;
   }
   legend{
-    font-family:'EB Garamond',serif;
+    font-family:'Work Sans',sans-serif;
+    font-weight:600;
     font-size:10px;
     letter-spacing:0.18em;
     text-transform:uppercase;
-    color:var(--gold);
+    color:var(--burnt);
     padding:0 0 12px;
     width:100%;
-    border-bottom:1px solid var(--stone);
+    border-bottom:1px solid var(--stone-deep);
     margin-bottom:18px;
   }
   .field{margin-bottom:22px;}
@@ -135,7 +141,8 @@
   .row3 .field.zip{flex:1;}
   label{
     display:block;
-    font-family:'EB Garamond',serif;
+    font-family:'Work Sans',sans-serif;
+    font-weight:600;
     font-size:10.5px;
     letter-spacing:0.1em;
     text-transform:uppercase;
@@ -143,14 +150,14 @@
     margin-bottom:8px;
   }
   label .req{color:var(--plum);}
-  label .opt{color:#A39A87;text-transform:none;letter-spacing:0;font-family:'EB Garamond',serif;font-size:11px;}
+  label .opt{color:#A39A87;text-transform:none;letter-spacing:0;font-family:'Work Sans',sans-serif;font-size:11px;}
   input[type="text"],input[type="email"],select{
     width:100%;
     border:1px solid var(--stone-deep);
     background:var(--stone);
     border-radius:var(--radius);
     padding:12px 13px;
-    font-family:'EB Garamond',serif;
+    font-family:'Work Sans',sans-serif;
     font-size:15px;
     color:var(--ink);
     transition:border-color 0.2s ease, background 0.2s ease;
@@ -165,11 +172,12 @@
   .submit-btn{
     width:100%;
     background:var(--plum);
-    color:var(--white);
+    color:var(--stone);
     border:none;
     border-radius:var(--radius);
     padding:15px;
-    font-family:'EB Garamond',serif;
+    font-family:'Work Sans',sans-serif;
+    font-weight:600;
     font-size:12px;
     letter-spacing:0.14em;
     text-transform:uppercase;
@@ -203,11 +211,11 @@
     margin:0 auto 20px;
     display:flex;align-items:center;justify-content:center;
     color:var(--gold);
-    font-family:'Cormorant Garamond',serif;
+    font-family:'Fraunces',serif;
     font-size:22px;
   }
   .confirm-screen h2{
-    font-family:'Cormorant Garamond',serif;
+    font-family:'Fraunces',serif;
     font-weight:500;
     font-size:26px;
     color:var(--plum-deep);
