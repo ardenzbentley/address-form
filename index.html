@@ -304,6 +304,10 @@
         <label for="address2" data-i18n="labelAddress2">Address line 2 <span class="opt" data-i18n="optional">(optional)</span></label>
         <input type="text" id="address2" name="address2" autocomplete="address-line2">
       </div>
+      <div class="field">
+        <label for="district" data-i18n="labelDistrict">District <span class="opt" data-i18n="ifApplicableField">(if applicable)</span></label>
+        <input type="text" id="district" name="district" autocomplete="off">
+      </div>
       <div class="row3">
         <div class="field city" data-field="city">
           <label for="city" data-i18n="labelCity">City <span class="req">*</span></label>
@@ -311,7 +315,7 @@
           <div class="error-text" data-i18n="errRequired">Required.</div>
         </div>
         <div class="field state" data-field="state">
-          <label for="state" data-i18n="labelState">State <span class="req">*</span></label>
+          <label for="state" data-i18n="labelState">State/Region/Department <span class="req">*</span></label>
           <input type="text" id="state" name="state" autocomplete="address-level1" required>
           <div class="error-text" data-i18n="errRequired">Required.</div>
         </div>
@@ -362,8 +366,10 @@ const translations = {
     labelAddress1: 'Address line 1 <span class="req">*</span>',
     labelAddress2: 'Address line 2 <span class="opt" data-i18n="optional">(optional)</span>',
     optional: "(optional)",
+    labelDistrict: 'District <span class="opt" data-i18n="ifApplicableField">(if applicable)</span>',
+    ifApplicableField: "(if applicable)",
     labelCity: 'City <span class="req">*</span>',
-    labelState: 'State <span class="req">*</span>',
+    labelState: 'State/Region/Department <span class="req">*</span>',
     labelZip: 'ZIP <span class="req">*</span>',
     labelCountry: 'Country <span class="req">*</span>',
     submit: "Submit Address",
@@ -390,8 +396,10 @@ const translations = {
     labelAddress1: 'Dirección línea 1 <span class="req">*</span>',
     labelAddress2: 'Dirección línea 2 <span class="opt" data-i18n="optional">(opcional)</span>',
     optional: "(opcional)",
+    labelDistrict: 'Distrito <span class="opt" data-i18n="ifApplicableField">(si aplica)</span>',
+    ifApplicableField: "(si aplica)",
     labelCity: 'Ciudad <span class="req">*</span>',
-    labelState: 'Estado <span class="req">*</span>',
+    labelState: 'Estado/Región/Departamento <span class="req">*</span>',
     labelZip: 'Código postal <span class="req">*</span>',
     labelCountry: 'País <span class="req">*</span>',
     submit: "Enviar dirección",
