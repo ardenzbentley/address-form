@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mailing Address</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Work+Sans:wght@300;400;500;600;700&family=Italiana&family=Bodoni+Moda+SC:ital,wght@0,700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#FBF6EC;
@@ -98,20 +98,21 @@
     margin:0 0 14px;
   }
   h1{
-    font-family:'Fraunces',serif;
-    font-weight:500;
-    font-style:italic;
-    font-size:clamp(28px,6vw,38px);
+    font-family:'Bodoni Moda SC',serif;
+    font-weight:700;
+    font-style:normal;
+    font-size:clamp(26px,5.5vw,36px);
     margin:0 0 10px;
     color:var(--ink);
     letter-spacing:0.01em;
   }
   .sub{
-    font-size:14px;
+    font-family:'Italiana',serif;
+    font-size:17px;
     color:var(--ink-soft);
     max-width:38ch;
     margin:0 auto;
-    line-height:1.55;
+    line-height:1.6;
   }
 
   form{padding:36px 40px 40px;}
@@ -146,7 +147,7 @@
     font-size:10.5px;
     letter-spacing:0.1em;
     text-transform:uppercase;
-    color:var(--ink-soft);
+    color:var(--ink);
     margin-bottom:8px;
   }
   label .req{color:var(--plum);}
@@ -157,8 +158,8 @@
     background:var(--stone);
     border-radius:var(--radius);
     padding:12px 13px;
-    font-family:'Work Sans',sans-serif;
-    font-size:15px;
+    font-family:'Shadows Into Light',cursive;
+    font-size:19px;
     color:var(--ink);
     transition:border-color 0.2s ease, background 0.2s ease;
   }
@@ -259,9 +260,9 @@
   </div>
 
   <div class="header">
-    <p class="eyebrow" data-i18n="eyebrow">For Our Records</p>
-    <h1 data-i18n="title">Where should we send it?</h1>
-    <p class="sub" data-i18n="subtitle">Please share your mailing address so we can send your invitation.</p>
+    <p class="eyebrow" data-i18n="eyebrow">Arden and Sam are getting married</p>
+    <h1 data-i18n="title">Please send us your address</h1>
+    <p class="sub" data-i18n="subtitle">We would love to celebrate with you</p>
   </div>
 
   <form id="addressForm" novalidate>
@@ -352,14 +353,16 @@
 </div>
 
 <script>
+/* ====== CONFIG ====== */
 
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw4LaHCszowMqayoHgKxVG1kr2L3-fKT3zSuN73TjnXU7u5qVj4XnqjUEwVOBa656Ua/exec";
 
+/* ====== TRANSLATIONS ====== */
 const translations = {
   en: {
-    eyebrow: "For Our Records",
-    title: "Where should we send it?",
-    subtitle: "Please share your mailing address so we can send your invitation.",
+    eyebrow: "Arden and Sam are getting married",
+    title: "Please send us your address",
+    subtitle: "We would love to celebrate with you",
     legendYou: "Your Name",
     legendPartner: 'Partner / Plus-One <span class="opt" data-i18n="ifApplicable">(if applicable)</span>',
     ifApplicable: "(if applicable)",
@@ -387,9 +390,9 @@ const translations = {
     errNetwork: "Something went wrong. Please try again, or email us directly."
   },
   es: {
-    eyebrow: "Para Nuestros Registros",
-    title: "¿A dónde lo enviamos?",
-    subtitle: "Por favor comparte tu dirección postal para enviarte la invitación.",
+    eyebrow: "Arden y Sam se casan",
+    title: "Por favor envíanos tu dirección",
+    subtitle: "Nos encantaría celebrar contigo",
     legendYou: "Tu Nombre",
     legendPartner: 'Pareja / Acompañante <span class="opt" data-i18n="ifApplicable">(si aplica)</span>',
     ifApplicable: "(si aplica)",
